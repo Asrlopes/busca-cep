@@ -2,12 +2,15 @@ import React from 'react';
 
 import Header from '~/components/Header';
 
-import { Container } from './styles';
+import { Container, Body } from './styles';
 
 function Main() {
   return (
     <Container>
       <Header />
+      <Body>
+        <input type="text" />
+      </Body>
     </Container>
   );
 }
