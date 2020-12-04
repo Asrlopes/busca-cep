@@ -1,12 +1,13 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import GlobalStyle from '~/styles/global';
+import Main from '~/pages/Main';
 
 function App() {
   return (
-    <div>
-      <h1>Eae</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Main />
+    </>
   );
 }
 
