@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  width: 100vw;
   padding: 0 1.875rem;
   background-color: #7d7a85;
   box-shadow: 0rem 0.125rem 0.3125rem 0rem rgba(0, 0, 0, 0.75);
@@ -9,6 +8,7 @@ export const Container = styled.header`
 
 export const Content = styled.div`
   height: 4rem;
+  max-width: 56.25rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

@@ -12,7 +12,7 @@ function Header() {
           <h1>Buscador de Cep</h1>
         </nav>
         <span>
-          Feito por: Amorésio de Souza <FaCopyright size={10} />
+          Amorésio de Souza <FaCopyright size={10} />
         </span>
       </Content>
     </Container>
