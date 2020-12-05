@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 
-import PropTypes from 'prop-types';
 import { FiAlertCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
 
@@ -56,10 +55,5 @@ function Input({ name, Icon, ...rest }) {
     </Container>
   );
 }
-
-Input.propTypes = {
-  name: PropTypes.string.isRequired,
-  Icon: PropTypes.element.isRequired,
-};
 
 export default Input;

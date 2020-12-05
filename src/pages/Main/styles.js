@@ -10,15 +10,17 @@ export const Container = styled.div`
 export const Body = styled.div`
   display: flex;
   height: 80%;
-  background-color: white;
-  margin: 1.875rem;
+  max-width: 56.25rem;
+  justify-content: center;
+  /* background-color: white; */
+  margin: 1.875rem auto;
   padding: 1.875rem;
   box-shadow: 0rem 0rem 0.625rem 0.0625rem #000000;
 `;
 
 export const SearchBox = styled.div`
   background-color: red;
-  flex: 0.5;
+  flex: 1;
   height: 100%;
 `;
 
@@ -39,7 +41,7 @@ export const Row = styled.div`
   button {
     background: #312e38;
     height: 8vh;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     border: 0;
     color: #fff;
     width: 4vw;
@@ -62,10 +64,10 @@ export const Row = styled.div`
     width: 9vw; /* Tamanho do select, maior que o tamanho da div "div-select" */
     height: 1.875rem; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
     border: 0.0625rem solid #ddd;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     height: 8vh;
     padding: 0.3125rem;
-    border-radius: 10px;
+    border-radius: 0.625rem;
   }
 `;
