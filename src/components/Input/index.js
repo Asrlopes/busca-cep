@@ -1,10 +1,10 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 
 import PropTypes from 'prop-types';
-import { FiAlertCircle } from 'react-icons/fa';
+import { FiAlertCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
 
-import { Container, Error } from './styles';
+import { Container, Error, Tip } from './styles';
 
 function Input({ name, Icon, ...rest }) {
   const inputRef = useRef(null);
@@ -42,10 +42,16 @@ function Input({ name, Icon, ...rest }) {
         {...rest}
       />
 
-      {error && (
-        <Error title={error}>
-          <FiAlertCircle color="#c53030" size={20} />
-        </Error>
+      {error ? (
+        true(
+          <Error title={error}>
+            <FiAlertCircle color="#c53030" size={20} />
+          </Error>,
+        )
+      ) : (
+        <Tip title="É necessário 8 digitos para formar um cep. Exemplo: 00000-000">
+          <FiAlertCircle color="#232129" size={20} />
+        </Tip>
       )}
     </Container>
   );
