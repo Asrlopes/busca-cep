@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import React, { useState, useCallback, useEffect, useRef } from 'react';
+import ReactInputMask from 'react-input-mask';
 
 import { FiAlertCircle } from 'react-icons/fi';
 import { useField } from '@unform/core';
@@ -27,13 +29,19 @@ function Input({ name, Icon, ...rest }) {
       name: fieldName,
       ref: inputRef.current,
       path: 'value',
+      setValue(ref, value) {
+        ref.setInputValue(value);
+      },
+      clearValue(ref) {
+        ref.setInputValue('');
+      },
     });
   }, [fieldName, registerField]);
 
   return (
     <Container isErrored={!!error} isFocused={isFocused} isFilled={isFilled}>
       {Icon && <Icon size={20} />}
-      <input
+      <ReactInputMask
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
@@ -42,11 +50,9 @@ function Input({ name, Icon, ...rest }) {
       />
 
       {error ? (
-        true(
-          <Error title={error}>
-            <FiAlertCircle color="#c53030" size={20} />
-          </Error>,
-        )
+        <Error title={error}>
+          <FiAlertCircle color="#c53030" size={20} />
+        </Error>
       ) : (
         <Tip title="É necessário 8 digitos para formar um cep. Exemplo: 00000-000">
           <FiAlertCircle color="#232129" size={20} />
