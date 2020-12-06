@@ -19,7 +19,7 @@ export const Content = styled.div`
     align-items: center;
 
     svg {
-      margin-right: 20px;
+      margin-right: 1.25rem;
     }
   }
 `;

@@ -4,18 +4,17 @@ export const Container = styled.div`
   position: relative;
 
   span {
-    background: #ff9000;
-    width: 160px;
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 14px;
+    width: 10rem;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
     font-weight: 500;
     opacity: 0;
     transition: opacity 0.4s;
     visibility: hidden;
 
     position: absolute;
-    bottom: calc(100% + 12px);
+    bottom: calc(100% + 0.75rem);
     left: 50%;
     transform: translateX(-50%);
 
@@ -24,8 +23,7 @@ export const Container = styled.div`
     &::before {
       content: '';
       border-style: solid;
-      border-color: #ff9000 transparent;
-      border-width: 6px 6px 0 6px;
+      border-width: 0.375rem 0.375rem 0 0.375rem;
       top: 100%;
       position: absolute;
       left: 50%;

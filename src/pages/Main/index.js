@@ -6,6 +6,8 @@ import { FaSearch, FaPaperPlane } from 'react-icons/fa';
 
 // import * as Yup from 'yup';
 
+import { useToast } from '~/hooks/Toast';
+
 import Header from '~/components/Header';
 import Input from '~/components/Input';
 
@@ -13,8 +15,17 @@ import { Container, Body, SearchBox, Row, FormStyled } from './styles';
 
 function Main() {
   const formRef = useRef(null);
+  const { addToast } = useToast();
 
   const [inputType, setInputType] = useState('CEP');
+
+  function teste() {
+    addToast({
+      type: 'error',
+      title: 'Erro na autenticação',
+      description: 'Ocorreu um erro ao fazer login, cheque as credenciais',
+    });
+  }
 
   return (
     <Container>
@@ -37,7 +48,7 @@ function Main() {
                 />
               )}
 
-              <button type="submit">
+              <button type="button" onClick={() => teste()}>
                 <FaPaperPlane size={20} />
               </button>
 

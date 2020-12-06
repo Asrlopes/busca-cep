@@ -12,7 +12,6 @@ export const Body = styled.div`
   height: 80%;
   max-width: 56.25rem;
   justify-content: center;
-  /* background-color: white; */
   margin: 1.875rem auto;
   padding: 1.875rem;
   box-shadow: 0rem 0rem 0.625rem 0.0625rem #000000;
