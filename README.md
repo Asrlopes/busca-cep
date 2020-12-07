@@ -20,9 +20,9 @@ Teste técnico da empresa <a href="https://jobs.kenoby.com/vagascometa">Cometa</
 
 <p align="center">
   <a href="##-sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-getting-started">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-how-to-contribute">Extra</a>
+  <a href="##-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="##-começando">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="##-extra">Extra</a>
 </p>
 
 ## 📖 Sobre o projeto
@@ -79,7 +79,7 @@ Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 #### Ou simplemente acessar a [Página online](https://gifted-bhabha-cef33d.netlify.app/) do projeto.
 
-### Extra
+## Extra
 
 #### Sobre os Requisitos.
 
