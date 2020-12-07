@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
-import React, { useRef, useState, useCallback, useEffect } from 'react';
+import React, { useRef, useState, useCallback } from 'react';
 import * as Yup from 'yup';
-import { FaSearch, FaPaperPlane } from 'react-icons/fa';
+import { FaSearch, FaPaperPlane, FaRoad } from 'react-icons/fa';
 
 // import { css } from '@emotion/core';
 import ClipLoader from 'react-spinners/ClipLoader';
@@ -15,22 +15,27 @@ import { useCep } from '~/hooks/CepFinder';
 
 import Header from '~/components/Header';
 import Input from '~/components/Input';
+import ItemCard from '~/components/ItemCard';
+import ItemDetail from '~/components/ItemDetail';
 
-import { Container, Body, SearchBox, Row, FormStyled } from './styles';
+import {
+  Container,
+  Body,
+  SearchBox,
+  Row,
+  FormStyled,
+  ListContainer,
+} from './styles';
 
 function Main() {
   const formRef = useRef(null);
   // const { addToast } = useToast();
-  const { FindCepByCode, loading, data } = useCep();
+  const { FindCepByCode, loading, FindCepByUfCityAddress, data } = useCep();
 
   const [inputType, setInputType] = useState('CEP');
 
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
-  const handleSubmit = useCallback(async (FormData) => {
-    const cep = FormData.cep.replace(/-/g, '');
+  const handleSubmitCode = useCallback(async (FormData) => {
+    const cep = FormData.cep?.replace(/-/g, '').split('_')[0];
 
     try {
       formRef.current?.setErrors({});
@@ -55,7 +60,46 @@ function Main() {
 
         formRef.current?.setErrors(errors);
       }
-      console.log(err);
+    }
+  }, []);
+
+  const handleSubmitUf = useCallback(async (FormData) => {
+    let uf;
+    let city;
+    let ufCity;
+
+    if (FormData.ufCity) {
+      uf = FormData.ufCity?.split(' ')[0].trim();
+      city = FormData.ufCity?.split(uf)[1].trim();
+      ufCity = `${uf} ${city}`;
+    }
+
+    try {
+      formRef.current?.setErrors({});
+
+      const schema = Yup.object().shape({
+        uf: Yup.string().required('O campo de UF/Cidade é obrigatório'),
+        street: Yup.string(),
+      });
+
+      await schema.validate(
+        { uf: ufCity, street: FormData.street },
+        {
+          abortEarly: false,
+        },
+      );
+
+      await FindCepByUfCityAddress({
+        uf,
+        city,
+        address: FormData.street,
+      });
+    } catch (err) {
+      if (err instanceof Yup.ValidationError) {
+        const errors = getValidationErros(err);
+
+        formRef.current?.setErrors(errors);
+      }
     }
   }, []);
 
@@ -65,42 +109,57 @@ function Main() {
       <Body>
         <SearchBox>
           <Row>
-            <FormStyled ref={formRef} onSubmit={handleSubmit}>
+            <FormStyled
+              ref={formRef}
+              onSubmit={inputType === 'CEP' ? handleSubmitCode : handleSubmitUf}
+            >
               {inputType === 'CEP' ? (
-                <Input
-                  name="cep"
-                  Icon={FaSearch}
-                  placeholder="Pesquisar por Cep"
-                  mask="99999-999"
-                />
-              ) : (
-                <Input
-                  name="uf"
-                  Icon={FaSearch}
-                  placeholder="Pesquisar por UF/Cidade"
-                />
-              )}
-
-              <button type="submit">
-                {loading ? (
-                  <ClipLoader
-                    // css={override}
-                    size={20}
-                    color="#FFF"
-                    loading={loading}
+                <>
+                  <Input
+                    name="cep"
+                    Icon={FaSearch}
+                    placeholder="Pesquisar por Cep"
+                    mask="99999-999"
+                    type={inputType}
                   />
-                ) : (
-                  <FaPaperPlane size={20} />
-                )}
-              </button>
+                </>
+              ) : (
+                <>
+                  <Input
+                    name="ufCity"
+                    Icon={FaSearch}
+                    placeholder="Pesquisar por UF/Cidade"
+                    type={inputType}
+                  />
+
+                  <Input
+                    name="street"
+                    Icon={FaRoad}
+                    placeholder="logradouro"
+                    type="logradouro"
+                  />
+                </>
+              )}
 
               <select onChange={(event) => setInputType(event.target.value)}>
                 <option value="CEP">CEP</option>
                 <option value="UF">UF/Cidade</option>
               </select>
+
+              <button type="submit">
+                {loading ? (
+                  <ClipLoader size={20} color="#FFF" loading={loading} />
+                ) : (
+                  <FaPaperPlane size={20} />
+                )}
+              </button>
             </FormStyled>
-            {/* {data && data?.map((items) => <li>{items.cep}</li>)} */}
           </Row>
+          <ListContainer>
+            <ItemCard data={data} />
+            <hr />
+            <ItemDetail />
+          </ListContainer>
         </SearchBox>
       </Body>
     </Container>
