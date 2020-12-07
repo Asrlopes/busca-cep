@@ -83,7 +83,7 @@ Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 #### Sobre os Requisitos.
 
-- A aplicação deverá consumir os dados da API aberta [Via Cep](https://viacep.com.br/).
+- A aplicação deverá consumir os dados da API aberta [Via Cep](https://viacep.com.br/). ✅
 - Deve haver tratamento dos erros, por exemplo, conexão com a API e dados inválidos. ✅
 
 - O código da aplicação e as instruções para instalação e execução devem estar presentes em um repositório público no GitHub. ✅
