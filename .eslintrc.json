@@ -37,6 +37,7 @@
       "no-console": ["error", { "allow": ["tron"] }],
       "react/jsx-props-no-spreading": "off",
       "react/prop-types": 0,
+      "no-extra-boolean-cast":"off",
       "import/no-cycle": "off"
     },
     "settings": {
