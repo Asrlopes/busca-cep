@@ -18,7 +18,6 @@ export const Body = styled.div`
 `;
 
 export const SearchBox = styled.div`
-  background-color: red;
   flex: 1;
   height: 100%;
 `;
@@ -28,8 +27,20 @@ export const FormStyled = styled(Form)`
   flex-direction: row;
   align-items: center;
   /* justify-content: space-between; */
-  background-color: blue;
+
   width: 100%;
+`;
+
+export const ListContainer = styled.div`
+  display: flex;
+  flex: 1;
+  height: 66vh;
+
+  hr {
+    background-color: red;
+    height: 90%;
+    align-self: center;
+  }
 `;
 
 export const Row = styled.div`
@@ -39,7 +50,7 @@ export const Row = styled.div`
 
   button {
     background: #312e38;
-    height: 8vh;
+    height: 3.125rem;
     border-radius: 0.625rem;
     border: 0;
     color: #fff;
@@ -47,6 +58,8 @@ export const Row = styled.div`
     font-weight: 500;
     transition: background-color 0.2s;
     margin: 0 0.3125rem;
+    border: 0.0625rem solid #fff;
+    box-shadow: 0rem 0rem 0.625rem 0.0625rem #000000;
 
     &:hover {
       background-color: ${shade(0.2, '#312e38')};
@@ -61,12 +74,14 @@ export const Row = styled.div`
       no-repeat #eeeeee; /* Imagem de fundo (Seta) */
     background-position: 6vw center; /*Posição da imagem do background*/
     width: 9vw; /* Tamanho do select, maior que o tamanho da div "div-select" */
-    height: 1.875rem; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+
     border: 0.0625rem solid #ddd;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    height: 8vh;
+    height: 3.125rem;
     padding: 0.3125rem;
     border-radius: 0.625rem;
+    margin: 0 0.3125rem;
+    box-shadow: 0rem 0rem 0.625rem 0.0625rem #000000;
   }
 `;
