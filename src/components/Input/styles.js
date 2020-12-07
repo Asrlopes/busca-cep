@@ -6,17 +6,15 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 0.625rem;
   padding: 1rem;
-  width: 55%;
+  width: 40%;
+  margin: 0 0.3125rem;
 
   border: 0.125rem solid #232129;
   color: #666360;
 
   display: flex;
   align-items: center;
-
-  & + div {
-    margin-top: 0.5rem;
-  }
+  box-shadow: 0rem 0rem 0.625rem 0.0625rem #000000;
 
   ${(props) =>
     props.isErrored &&
@@ -48,6 +46,11 @@ export const Container = styled.div`
     &::placeholder {
       color: #666360;
     }
+  }
+
+  span {
+    color: red;
+    margin: 0 0 0.125 0rem;
   }
 
   svg {
