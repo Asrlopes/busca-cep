@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+<h1 align="center">Buscador de Cep 🇧🇷<h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img alt="mapa-brasil" src="https://image.flaticon.com/icons/png/512/47/47442.png" width="100"/>
+</p>
 
-## Available Scripts
+<h2 align="center">
+Teste técnico da empresa <a href="https://jobs.kenoby.com/vagascometa">Cometa</a>
+</h2>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Asrlopes/teste-analista">
 
-In the project directory, you can run:
+  <a href="https://www.linkedin.com/in/amor%C3%A9sio-de-souza-429ba314b/">
+    <img alt="Made by" src="https://img.shields.io/badge/Feito%20por-Amor%C3%A9sio%20de%20Souza-blue">
+  </a>
 
-### `yarn start`
+  <img alt="tamanho size" src="https://img.shields.io/github/repo-size/Asrlopes/teste-analista">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="##-sobre-o-projeto">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">Extra</a>
+</p>
 
-### `yarn test`
+## 📖 Sobre o projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O buscador de cep foi construido com o intuito ser um teste técnico para a empresa [Cometa](https://jobs.kenoby.com/vagascometa).
 
-### `yarn build`
+### 🙅🏽‍♂️ Requisitos obrigatórios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A aplicação deverá consumir os dados da API aberta [Via Cep](https://viacep.com.br/).
+- Deve haver tratamento dos erros, por exemplo, conexão com a API e dados inválidos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- O código da aplicação e as instruções para instalação e execução devem estar presentes em um repositório público no GitHub.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A aplicação deve permitir a consulta de CEP pelo número.
 
-### `yarn eject`
+- A aplicação deve permitir a consulta de CEP pela sigla do estado e cidade, exemplo MT Cáceres
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Tecnologias
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ##### [ReactJS](https://pt-br.reactjs.org/)
+- ##### [Axios](https://github.com/axios/axios)
+- ##### [Lottie](https://github.com/chenqingspring/react-lottie)
+- ##### [React spring](https://www.react-spring.io/)
+- ##### [Polished](https://github.com/styled-components/polished)
+- ##### [Styled components](https://styled-components.com/)
+- ##### [React Icons](https://react-icons.netlify.com/#/)
+- ##### [UnForm](https://unform.dev/)
+- ##### [Yup](https://github.com/jquense/yup)
+- ##### [Eslint](https://eslint.org/)
+- ##### [Prettier](https://prettier.io/)
+- ##### [EditorConfig](https://editorconfig.org/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 💻 Começando
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Requisitos
 
-## Learn More
+Ter o `Yarn` ou o `NPM`instalados.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Primeiro passo
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Em um diretório de sua preferência rode o comando:
+`git clone https://github.com/Asrlopes/teste-analista.git`
 
-### Code Splitting
+Abra a pasta do projeto e digite.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### `yarn install` ou `npm install`
 
-### Analyzing the Bundle Size
+Após intalar todas as dependencias, dentro do terminal do projeto rode o comando.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### `yarn start ou `npm start`
 
-### Making a Progressive Web App
+Roda o app em modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Ou simplemente acessar a [Página online](https://gifted-bhabha-cef33d.netlify.app/) do projeto.
 
-### Advanced Configuration
+### Extra
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Sobre os Requisitos.
 
-### Deployment
+- A aplicação deverá consumir os dados da API aberta [Via Cep](https://viacep.com.br/).
+- Deve haver tratamento dos erros, por exemplo, conexão com a API e dados inválidos. ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- O código da aplicação e as instruções para instalação e execução devem estar presentes em um repositório público no GitHub. ✅
 
-### `yarn build` fails to minify
+- A aplicação deve permitir a consulta de CEP pelo número. ✅
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Explicação
+
+- A aplicação deve permitir a consulta de CEP pela sigla do estado e cidade, exemplo MT Cáceres ✅ ❗️
+
+De acordo com a API do [Via Cep](https://viacep.com.br/), existe dois métodos de busca, por numero de cep e por UF/Cidade/Logradouro, como algumas cidades do Brasil possuem apenas 1 cep, a busca não necessita de logradouro, exemplo (Chapada dos guimarães e Mirassol D'Oeste ).
+Cidades maiores como cáceres que possuem 1 cep por rua é necessário identificar um logradouro para a busca.
