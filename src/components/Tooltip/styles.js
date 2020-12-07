@@ -4,7 +4,7 @@ export const Container = styled.div`
   position: relative;
 
   span {
-    width: 10rem;
+    width: 15rem;
     padding: 0.5rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
