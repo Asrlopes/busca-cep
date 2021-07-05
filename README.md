@@ -4,9 +4,7 @@
 <img alt="mapa-brasil" src="https://image.flaticon.com/icons/png/512/47/47442.png" width="100"/>
 </p>
 
-<h2 align="center">
-Teste técnico da empresa <a href="https://jobs.kenoby.com/vagascometa">Cometa</a>
-</h2>
+
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Asrlopes/teste-analista">
 
