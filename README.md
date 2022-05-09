@@ -1,7 +1,7 @@
 <h1 align="center">Buscador de Cep 🇧🇷<h1>
 
 <p align="center">
-<img alt="mapa-brasil" src="https://image.flaticon.com/icons/png/512/47/47442.png" width="100"/>
+<img alt="mapa-brasil" src="https://cdn-icons-png.flaticon.com/512/1478/1478047.png" width="100"/>
 </p>
 
 
