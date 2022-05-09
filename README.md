@@ -12,7 +12,7 @@
     <img alt="Made by" src="https://img.shields.io/badge/Feito%20por-Amor%C3%A9sio%20de%20Souza-blue">
   </a>
 
-  <img alt="tamanho size" src="https://img.shields.io/github/repo-size/Asrlopes/teste-analista">
+  <img alt="tamanho size" src="https://img.shields.io/github/repo-size/Asrlopes/busca-cep">
 
 </p>
 
@@ -62,7 +62,7 @@ Ter o `Yarn` ou o `NPM`instalados.
 ### Primeiro passo
 
 Em um diretório de sua preferência rode o comando:
-`git clone https://github.com/Asrlopes/teste-analista.git`
+`git clone https://github.com/Asrlopes/busca-cep.git`
 
 Abra a pasta do projeto e digite.
 
