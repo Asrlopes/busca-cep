@@ -25,7 +25,7 @@
 
 ## 📖 Sobre o projeto
 
-O buscador de cep foi construido com o intuito ser um teste técnico para a empresa [Cometa](https://jobs.kenoby.com/vagascometa).
+O buscador de cep foi construido com o propósito de estudo.
 
 ### 🙅🏽‍♂️ Requisitos obrigatórios
 
